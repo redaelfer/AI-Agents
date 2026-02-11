@@ -1,58 +1,58 @@
-# AI Agent 🤖
+# AI Agent 
 
-**ai-agents** est un assistant intelligent local conçu pour la supervision de système et l'analyse de documents. Il utilise le modèle **Llama 3.2** via **Ollama** pour interagir avec votre système d'exploitation et traiter vos fichiers en toute confidentialité.
+**ai-agents** is a local intelligent assistant designed for system supervision and document analysis. It utilizes the **Llama 3.2** model via **Ollama** to interact with your operating system and process your files with full confidentiality.
 
-## 🌟 Fonctionnalités
+## 🌟 Features
 
-* **Supervision Système** : Monitoring en temps réel de l'utilisation du processeur (CPU) et de la mémoire vive (RAM).
-* **Analyse de Documents** : Lecture, extraction et résumé structuré de fichiers aux formats `.txt`, `.py`, `.md`, `.pdf` et `.docx`.
-* **Gestionnaire de Tâches** : Ajout et consultation de rappels enregistrés localement dans un fichier `reminders.txt`.
-* **Triage d'Emails** : Module de classification et de résumé automatique des courriels.
-* **Exploration de Fichiers** : Capacité de lister le contenu des répertoires et de lire des fichiers spécifiques via des commandes naturelles.
+* **System Supervision**: Real-time monitoring of CPU and RAM usage.
+* **Document Analysis**: Reading, extraction, and structured summarization of files in `.txt`, `.py`, `.md`, `.pdf`, and `.docx` formats.
+* **Task Manager**: Adding and viewing reminders stored locally in a `reminders.txt` file.
+* **Email Triage**: Automatic classification and summarization module for emails.
+* **File Exploration**: Ability to list directory contents and read specific files using natural language commands.
 
-## 🛠️ Architecture Technique
+## 🛠️ Technical Architecture
 
-Le projet repose sur une architecture hybride combinant discussion libre (Chatbot) et exécution de fonctions (Agent) :
+The project is based on a hybrid architecture combining free-form discussion (Chatbot) and function execution (Agent):
 
-* **Interface Utilisateur** : Développée avec **Streamlit** pour une expérience interactive.
-* **Cœur IA** : Orchestration via **Ollama** avec support du "Tool Calling" pour exécuter des scripts Python.
-* **Modules** :
-* `summarize.py` : Logique de traitement des documents et triage des emails.
-* `monitor.py` : Fonctions de monitoring système et gestion des rappels.
-* `app.py` : Point d'entrée de l'application et gestion du flux de conversation.
+* **User Interface**: Developed with **Streamlit** for an interactive experience.
+* **AI Core**: Orchestrated via **Ollama** with "Tool Calling" support to execute Python scripts.
+* **Modules**:
+* `summarize.py`: Logic for document processing and email triage.
+* `monitor.py`: System monitoring functions and reminder management.
+* `app.py`: Application entry point and conversation flow management.
 
 
 
-## 🚀 Installation et Lancement
+## Installation and Launch
 
-### 1. Prérequis
+### 1. Prerequisites
 
-* [Ollama](https://ollama.com/) installé avec le modèle `llama3.2`.
-* Python 3.10 ou supérieur.
+* [Ollama](https://ollama.com/) installed with the `llama3.2` model.
+* Python 3.10 or higher.
 
-### 2. Installation des dépendances
+### 2. Dependency Installation
 
-Activez votre environnement virtuel et installez les bibliothèques requises :
+Activate your virtual environment and install the required libraries:
 
 ```bash
 pip install -r requirements.txt
 
 ```
 
-*Les dépendances incluent notamment `psutil`, `PyPDF2`, `python-docx`, `streamlit` et `ollama`.*
+*Dependencies notably include `psutil`, `PyPDF2`, `python-docx`, `streamlit`, and `ollama`.*
 
-### 3. Exécution
+### 3. Execution
 
-Lancez l'interface utilisateur avec la commande suivante :
+Launch the user interface with the following command:
 
 ```bash
 streamlit run app.py
 
 ```
 
-## 📂 Structure du Projet
+## 📂 Project Structure
 
-* `app.py` : Interface principale et logique de l'agent superviseur.
-* `summarize.py` : Outils d'analyse de documents et simulation de messagerie.
-* `monitor.py` : Outils de monitoring système et gestion des rappels.
-* `requirements.txt` : Liste des dépendances Python.
+* `app.py`: Main interface and supervisor agent logic.
+* `summarize.py`: Document analysis and messaging simulation tools.
+* `monitor.py`: System monitoring and reminder management tools.
+* `requirements.txt`: List of Python dependencies.
